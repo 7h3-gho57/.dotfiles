@@ -1,6 +1,6 @@
 local cmp = require'cmp'
 
-cmp.setup({
+cmp.setup{
   snippet = {
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
@@ -15,15 +15,19 @@ cmp.setup({
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     }),
-    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
   }, {
     { name = 'buffer' },
-  })
-})
+  }),
+  experimental = {
+    native_menu = false,
+    ghost_text = true,}
+}
+
 cmp.setup.cmdline('/', {
   sources = {
     { name = 'buffer' }
@@ -37,12 +41,6 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
-cmp.setup{
-  experimental = {
-    ghost_text = true
-  }
-}
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 require('lspconfig')['pylsp'].setup {
