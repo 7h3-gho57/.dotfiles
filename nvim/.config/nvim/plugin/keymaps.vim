@@ -5,7 +5,7 @@ let mapleader = " "
 nnoremap <leader>pv :Vex<CR>
 nnoremap <leader><CR> :so ~/.config/nvim/init.lua<CR>
 
-"scriptencoding utf-8
+scriptencoding utf-8
 
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
