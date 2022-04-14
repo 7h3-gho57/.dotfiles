@@ -1,6 +1,6 @@
 require 'nvim-treesitter.install'.compilers = { "clang", "gcc" }
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
+  ensure_installed = "all",
   sync_install = false,
   ignore_install = { },
   highlight = {
@@ -9,3 +9,4 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+require'lspconfig'.jsonls.setup{}

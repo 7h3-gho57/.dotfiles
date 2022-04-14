@@ -25,7 +25,6 @@ return require('packer').startup(function()
   'nvim-telescope/telescope.nvim',
   requires = { { 'nvim-lua/plenary.nvim' } }
   }
-
   use {
     'numToStr/Comment.nvim',
     config =function()
@@ -36,4 +35,14 @@ return require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use { 'folke/trouble.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function()
+      require('trouble').setup {
+      icons = true,
+      mode = "workspace_diagnostics"
+      }
+    end
+      }
 end)

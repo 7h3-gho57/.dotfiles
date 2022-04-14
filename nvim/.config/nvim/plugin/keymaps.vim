@@ -18,4 +18,4 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 set shiftwidth=2
 set softtabstop=2
 
-autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python "%"<CR>
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
