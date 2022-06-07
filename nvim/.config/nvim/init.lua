@@ -12,6 +12,10 @@ vim.o.scrolloff = 12
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 vim.o.mouse = 'a'
+vim.o.termguicolors = true
+-- vim.g.ayucolor = 'dark'
+-- vim.g.colorscheme = 'ayu'
+
 
 -- vim.opt.listchars = {eol='¬',tab='>·',trail='~',extends='>',precedes='<'}
 vim.opt.listchars = {eol = '↲', tab = '>▸', trail = '·'}
@@ -25,3 +29,9 @@ require 'plugin/treesitter'
 require 'plugin/lualine'
 -- require 'plugin/null'
 require 'plugin/lsp'
+
+
+
+-- set termguicolors
+-- let ayucolor="dark"
+-- colorscheme ayu

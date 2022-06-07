@@ -1,6 +1,6 @@
-set termguicolors
-let ayucolor="dark"
-colorscheme ayu
+" set termguicolors
+" let ayucolor="dark"
+" colorscheme ayu
 
 scriptencoding utf-8
 
