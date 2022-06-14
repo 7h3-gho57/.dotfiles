@@ -1,4 +1,5 @@
 -- meta-accessor
+vim.o.ma = true
 vim.g.mapleader = " "
 vim.o.scrolloff = 8
 vim.o.cursorline = true
@@ -9,10 +10,19 @@ vim.o.smartindent = true
 vim.o.colorcolumn = '80'
 vim.o.hlsearch = true
 vim.o.scrolloff = 12
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 vim.o.mouse = 'a'
 vim.o.termguicolors = true
+vim.o.expandtab = true
+vim.o.foldlevelstart = 99
+vim.o.scrolloff = 7
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
+
+vim.o.clipboard = "unnamedplus"
+
 -- vim.g.ayucolor = 'dark'
 -- vim.g.colorscheme = 'ayu'
 
@@ -29,8 +39,6 @@ require 'plugin/treesitter'
 require 'plugin/lualine'
 -- require 'plugin/null'
 require 'plugin/lsp'
-
-
 
 -- set termguicolors
 -- let ayucolor="dark"

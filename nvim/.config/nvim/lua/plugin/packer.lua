@@ -15,6 +15,7 @@ return require('packer').startup(function()
   use 'hrsh7th/vim-vsnip'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+  use 'williamboman/nvim-lsp-installer'
 
 -- Treesitter
   use {'nvim-treesitter/nvim-treesitter',
@@ -47,4 +48,10 @@ return require('packer').startup(function()
       }
     end
       }
+  use 'mfussenegger/nvim-dap'
+  use 'leoluz/nvim-dap-go'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+
 end)
