@@ -1,1 +1,4 @@
 nvim/.config/nvim/plugin/packer_compiled.lua
+nvim/.config/nvim/package-lock.json
+nvim/.config/nvim/package.json
+nvim/.config/nvim/node_modules/
