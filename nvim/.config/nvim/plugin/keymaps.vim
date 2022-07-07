@@ -15,3 +15,4 @@ scriptencoding utf-8
 " set softtabstop=2
 
 autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
+autocmd Filetype go nnoremap <buffer> <F5> :w<CR>:vert ter go run "%"<CR>

@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
 end
 
-local servers = { 'pylsp', 'jsonls' }
+local servers = { 'pylsp', 'jsonls', 'golangci_lint_ls', 'gopls' }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -38,7 +38,23 @@ for _, lsp in pairs(servers) do
     }
   }
 end
+local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig/configs'
 
+if not configs.golangcilsp then
+configs.golangcilsp = {
+default_config = {
+cmd = {'golangci-lint-langserver'},
+root_dir = lspconfig.util.root_pattern('.git', 'go.mod'),
+init_options = {
+command = { "golangci-lint", "run", "--enable-all", "--disable", "lll", "--out-format", "json" };
+}
+};
+}
+end
+lspconfig.golangci_lint_ls.setup {
+filetypes = {'go','gomod'}
+}
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
