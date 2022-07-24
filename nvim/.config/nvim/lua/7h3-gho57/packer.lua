@@ -3,7 +3,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   -- selfmanage Packer
   use 'wbthomason/packer.nvim' -- Package manager
-	use 'ayu-theme/ayu-vim'
+  use 'ayu-theme/ayu-vim'
+  use 'folke/tokyonight.nvim'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
