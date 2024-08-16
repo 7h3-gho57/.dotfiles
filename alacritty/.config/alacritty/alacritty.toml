@@ -1,0 +1,17 @@
+import = [
+  # uncomment the flavour you want below:
+  # curl -LO --output-dir ~/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-latte.toml
+  "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+]
+shell = "tmux"
+
+# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FantasqueSansMono.zip
+# mkdir -p ~/.local/share/fonts/fantasque
+# unzip FantasqueSansMono.zip
+# cp *.ttf ~/.local/share/fonts/fantasque/
+
+[font]
+normal = { family = "FantasqueSansM Nerd Font Mono"}
